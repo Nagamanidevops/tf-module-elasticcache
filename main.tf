@@ -44,7 +44,7 @@ resource "aws_elasticache_replication_group" "elasticache" {
   automatic_failover_enabled  = true
   port                        = 6379
   subnet_groupname = aws_elasticache_subnet_group.default.name
-  security_group_ids = [aws_elasticache_subnet_group.elasticache.id]
+ // security_group_ids = [aws_elasticache_subnet_group.elasticache.id]
   
   num_node_groups         = var.num_node_groups
   replicas_per_node_group = var.replicas_per_node_group
